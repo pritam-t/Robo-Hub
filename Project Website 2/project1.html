@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Montserrat:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img\Logo 2.png" alt="Robo Hub Logo"/>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="form.php">Innovate</a>
+            <a href="about.html">About Us</a>
+            <a href="login.php">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-details">
+            <h2>RoverX</h2>
+            <img src="img\project3.png" alt="RoverX Image">
+            <p class="description"><strong>Project Description:</strong></p>
+            <p class="description-text">
+                RoverX is engineered to meet the needs of advanced exploration by combining robotics with cutting-edge technology. It offers efficient exploration capabilities in challenging environments.
+            </p>
+            <p class="subheading">Why We Need RoverX:</p>
+            <p class="subheading-text"><strong>Pioneering Exploration:</strong> RoverX is designed to venture into challenging and hazardous environments that are difficult for humans to access. Whether it's rugged terrain, extreme conditions, or complex structures, RoverX can navigate and explore with ease, uncovering new possibilities and insights.</p>
+            <p class="subheading-text"><strong>Unmatched Efficiency:</strong> With its advanced automation and precision technology, RoverX performs repetitive and complex tasks with remarkable efficiency. This not only streamlines data collection processes but also minimizes human error, ensuring the reliability and accuracy of gathered information.</p>
+            <p class="subheading-text"><strong>Real-Time Data Transmission:</strong> Equipped with state-of-the-art communication systems, RoverX transmits real-time data back to operators. This immediate feedback allows for swift analysis and decision-making, enhancing the speed and effectiveness of responses to emerging situations.</p>
+            <p class="subheading-text"><strong>Cost-Effectiveness:</strong> By automating exploration and data collection, RoverX reduces the need for extensive manpower and operational costs. Its efficiency translates into lower expenses and a more sustainable approach to exploration and research.</p>
+            <p class="subheading-text"><strong>Versatility Across Applications:</strong> RoverX is adaptable to a wide range of applications, from environmental monitoring and geological surveys to industrial inspections and research missions. Its flexibility makes it an invaluable asset in diverse fields, providing tailored solutions to various challenges.</p>
+            <p class="subheading-text"><strong>Advanced Navigation and Sensing:</strong> Equipped with sophisticated sensors and navigation systems, RoverX can accurately map and analyze its surroundings, providing detailed and actionable insights. This advanced capability enhances the robot's ability to perform tasks in dynamic and unpredictable environments.</p>
+            <p class="subheading-text"><strong>Future-Ready Technology:</strong> Designed with scalability and future advancements in mind, RoverX can integrate with emerging technologies and adapt to new challenges, ensuring its relevance and utility in evolving fields of exploration and research.</p>
+            
+                  <h3>Components Required</h3>
+            <table class="components-table">
+                <thead>
+                    <tr>
+                        <th>Component Name</th>
+                        <th>Short Info</th>
+                        <th>Component Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Arduino Uno</td>
+                        <td>Microcontroller board based on the ATmega328P</td>
+                        <td><img src="img\au.jpg" alt="Arduino Uno" /></td>
+                    </tr>
+                    <tr>
+                        <td>L298N</td>
+                        <td>Motor driver IC used to control motors</td>
+                        <td><img src="img\l298n.jpg" alt="L293D" /></td>
+                    </tr>
+                    <tr>
+                        <td>IR Sensor</td>
+                        <td>Infrared sensor used for obstacle detection</td>
+                        <td><img src="img\sensor.jpg" alt="IR Sensor" /></td>
+                    </tr>
+                    <tr>
+                        <td>DC Motors</td>
+                        <td>Direct Current motors for driving the robot</td>
+                        <td><img src="img\motor.jpg" alt="DC Motors" /></td>
+                    </tr>
+                    <tr>
+                        <td>Power Switch</td>
+                        <td>Switch to control the power supply</td>
+                        <td><img src="img\switch.jpeg" alt="Power Switch" /></td>
+                    </tr>
+                    <tr>
+                        <td>LED</td>
+                        <td>Light Emitting Diode for status indication</td>
+                        <td><img src="img\led.jpg" alt="LED" /></td>
+                    </tr>
+                    <tr>
+                        <td>Battery Pack</td>
+                        <td>Power source for the robot</td>
+                        <td><img src="img\battery.jpg" alt="Battery Pack" /></td>
+                    </tr>
+                    <tr>
+                        <td>Chassis</td>
+                        <td>Frame of the robot</td>
+                        <td><img src="img\chassis.jpg" alt="Chassis" /></td>
+                    </tr>
+                    <tr>
+                        <td>Various Cables and Connectors</td>
+                        <td>Wiring and connectors for circuit connections</td>
+                        <td><img src="img\wires.jpg" alt="Cables and Connectors" /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Circuit Diagram</h3>
+            <img src="img\cd.png" alt="RoverX Circuit Diagram" class="circuit-diagram">
+
+            <h3>Code</h3>
+            <pre>
+#include <SoftwareSerial.h>   // header file of software serial port
+#include <Servo.h>            // include the Servo library
+
+SoftwareSerial Serial1(2, 3); // define software serial port name as Serial1 and define pin2 as RX & pin3 as TX
+
+int dist;                     // actual distance measurements of LiDAR
+int strength;                 // signal strength of LiDAR
+int check;                    // save check value
+int i;
+int uart[9];                  // save data measured by LiDAR
+const int HEADER = 0x59;      // frame header of data package
+
+const int RED_LED = 10;       // pin for red LED
+const int YELLOW_LED = 5;     // pin for yellow LED
+const int GREEN_LED = 6;      // pin for green LED
+const int SERVO_PIN = 9;      // pin for servo
+
+Servo myservo;                // create servo object to control a servo
+
+void setup() {
+  Serial1.begin(115200);      // set bit rate of serial port connecting LiDAR with Arduino
+  pinMode(RED_LED, OUTPUT);   // set red LED pin as output
+  pinMode(YELLOW_LED, OUTPUT);// set yellow LED pin as output
+  pinMode(GREEN_LED, OUTPUT); // set green LED pin as output
+  myservo.attach(SERVO_PIN);  // attaches the servo on pin 9 to the servo object
+  myservo.write(0);           // set initial position of servo to 0 degrees
+}
+
+void loop() {
+  if (Serial1.available()) {                // check if serial port has data input
+    if (Serial1.read() == HEADER) {         // assess data package frame header 0x59
+      uart[0] = HEADER;
+      if (Serial1.read() == HEADER) {       // assess data package frame header 0x59
+        uart[1] = HEADER;
+        for (i = 2; i < 9; i++) {           // save data in array
+          uart[i] = Serial1.read();
+        }
+        check = uart[0] + uart[1] + uart[2] + uart[3] + uart[4] + uart[5] + uart[6] + uart[7];
+        if (uart[8] == (check & 0xff)) {    // verify the received data as per protocol
+          dist = uart[2] + uart[3] * 256;   // calculate distance value
+
+          if (dist < 300 && dist >30) {                 // distance is less than 3 meters
+            digitalWrite(RED_LED, HIGH);
+            digitalWrite(YELLOW_LED, LOW);
+            digitalWrite(GREEN_LED, LOW);
+            myservo.write(90);              // set servo to 90 degrees
+          } else if (dist < 600) {          // distance is between 3 and 6 meters
+            digitalWrite(YELLOW_LED, HIGH);
+            digitalWrite(RED_LED, LOW);
+            digitalWrite(GREEN_LED, LOW);
+            myservo.write(0);               // set servo to 0 degrees
+          } else if(dist >= 600) {          // distance is greater than or equal to 6 meters
+            digitalWrite(GREEN_LED, HIGH);
+            digitalWrite(RED_LED, LOW);
+            digitalWrite(YELLOW_LED, LOW);
+            myservo.write(0);               // set servo to 0 degrees
+          }
+        }
+      }
+    }
+  }
+}
+
+            </pre>
+
+            <h3>Video Preview</h3>
+<a href="https://youtu.be/IRGpJHq2G7E?si=8tMW4o-UXLGB37NY" target="_blank" class="video-link">
+    <img src="https://img.youtube.com/vi/IRGpJHq2G7E/hqdefault.jpg" alt="Astra Video Thumbnail" class="video-thumbnail">
+</a>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img\Logo 2.png" alt="Robo Hub Logo">
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="form.php">Innovate</a>
+                <a href="about.html">About Us</a>
+                <a href="login.php">Login</a>
+            </div>
+        </div>
+        <div class="footer-socials">
+            <a href="#"><img src="img\facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img\twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="img\instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Robo Hub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

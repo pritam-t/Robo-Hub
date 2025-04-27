@@ -1,0 +1,231 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: gives a rounded corner effect */
+    margin-right: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 30px; /* Increased gap for larger font size */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600; /* Increased font weight */
+    font-size: 1.2rem; /* Increased font size */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Explore page main section */
+.image-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px; /* Space between image and following content */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 10%; /* Adjust top position to move text slightly down from the top */
+    left: 30%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.overlay-text {
+    font-family: 'Roboto Mono', monospace; /* Replace with desired robotics-related font */
+    font-size: 5rem; /* Large font size */
+    color: #fff;
+}
+
+/* Explore container styling */
+.explore-container {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.explore-container h2 {
+    color: #f4a300;
+    font-size: 4rem;
+    margin-bottom: 60px; /* Increased gap between heading and project boxes */
+    font-family: 'Georgia', sans-serif; /* Change font family */
+}
+
+/* Container for project items */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+}
+
+/* Individual project item styling */
+.project-link {
+    text-decoration: none;
+    color: inherit; /* Ensure text color is inherited from parent */
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0; /* Background color for the project box */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 1300px; /* Increased width for larger project items */
+    height: 600px; /* Fixed height to maintain proportion */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item img {
+    width: 50%; /* Width of the image */
+    height: auto;
+    object-fit: cover; /* Ensure image covers the space */
+}
+
+.project-info {
+    flex: 1; /* Allow text to take up remaining space */
+    padding: 10px;
+}
+
+.project-info h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7rem; /* Font size for project name */
+    color: #333;
+}
+
+.project-info p {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem; /* Font size for project info */
+    color: #666;
+}
+
+.project-item:hover {
+    transform: translateY(-10px); /* Bumping up effect */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 800px) {
+    .project-item {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .project-item {
+        width: 100%; /* Full width for very small screens */
+    }
+}
+
+/* Footer styling */
+footer {
+    background-color: #383736;
+    color: #fff;
+    padding: 12px 40px; /* Increase padding to make footer larger */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    border-radius: 10px; /* Curved edges for logo */
+    overflow: hidden; /* Ensure image fits within curved edges */
+}
+
+.footer-logo img {
+    width: 300px; /* Increase logo size */
+    height: auto;
+    border-radius: 10px; /* Curved edges for logo */
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* Increase font size */
+}
+
+.footer-links a:hover {
+    color: #f4a300;
+}
+
+/* Social media icons styling */
+.footer-socials {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 40px; /* Increase gap between icons */
+    width: 100%;
+}
+
+.footer-socials a img {
+    width: 60px; /* Increase social media icon size */
+    height: auto;
+}
+
+/* Footer bottom styling */
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+}

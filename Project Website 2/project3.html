@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Montserrat:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img\Logo 2.png" alt="Robo Hub Logo"/>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="form.php">Innovate</a>
+            <a href="about.html">About Us</a>
+            <a href="login.php">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-details">
+            <h2>ASTRA</h2>
+            <img src="img\project1.jpeg" alt="ASTRA Image">
+            <p class="description"><strong>Project Description:</strong></p>
+            <p class="description-text">
+                Astra is a cutting-edge robot designed to enhance warehouse operations by automating product delivery. It uses advanced line-following technology to navigate along a predefined black line, ensuring precise movement throughout the facility. Equipped with Bluetooth connectivity, Astra communicates with external devices, enabling real-time data exchange by scanning QR codes and verifying product details with the warehouse system.
+                After verifying data, Astra autonomously delivers products to designated locations, avoiding obstacles and optimizing routes. By combining automated navigation with accurate data verification, Astra significantly boosts warehouse efficiency and productivity.
+            </p>
+            <p class="subheading">Astra Usage in different sectors:</p>
+            <p class="subheading-text"><strong>1) Manufacturing:</strong> It can scan barcodes or QR codes on parts and products, verifying them with the database to ensure accurate inventory management. Astra can transport raw materials between workstations on a predefined path, streamlining the assembly line process.</p>
+            <p class="subheading-text"><strong>2) Healthcare:</strong>  Astra can be programmed to follow paths in hospitals, delivering medicine or medical supplies between departments or to patient rooms. It can be used to transport medical waste securely from wards to designated disposal areas.</p>
+            <p class="subheading-text"><strong>3) Logistics:</strong>  In distribution centers, Astra can be used to sort and deliver packages by following lines to specific areas or loading docks.It can verify package information and ensure they are placed in the correct shipment areas based on the scheduled routes.</p>
+            <p class="subheading-text"><strong>4) Airports:</strong> Astra can assist in transporting baggage from one terminal to another or from the check-in counter to loading areas. It can navigate through airport hangars or terminals delivering tools and supplies to different departments.</p>
+            <p class="subheading-text"><strong>5) Hospitality:</strong>  In hotels, Astra can follow predefined paths to deliver food, drinks, or amenities to guest rooms efficiently.It can assist by delivering towels, cleaning supplies, or other items to different floors or sections.</p>
+            <p class="subheading-text"><strong>6) Agriculture:</strong>  Astra can navigate through greenhouse paths, monitoring crops, delivering fertilizers, or collecting sensor data to maintain optimal growing conditions.It can be programmed to transport harvested crops from the field to storage areas or processing stations.</p>
+            <p class="subheading-text"><strong>7) Automotive:</strong> Astra can be used in automotive assembly plants to transport car parts between workstations, reducing human labor and improving efficiency. It can scan and verify parts as they move through the production line, ensuring quality checks at each stage.</p>
+            
+                  <h3>Components Required</h3>
+            <table class="components-table">
+                <thead>
+                    <tr>
+                        <th>Component Name</th>
+                        <th>Short Info</th>
+                        <th>Component Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Arduino Uno</td>
+                        <td>Microcontroller board based on the ATmega328P</td>
+                        <td><img src="img\au.jpg" alt="Arduino Uno" /></td>
+                    </tr>
+                    <tr>
+                        <td>L298N</td>
+                        <td>Motor driver IC used to control motors</td>
+                        <td><img src="img\l298n.jpg" alt="L293D" /></td>
+                    </tr>
+                    <tr>
+                        <td>IR Sensor</td>
+                        <td>Infrared sensor used for obstacle detection</td>
+                        <td><img src="img\sensor.jpg" alt="IR Sensor" /></td>
+                    </tr>
+                    <tr>
+                        <td>DC Motors</td>
+                        <td>Direct Current motors for driving the robot</td>
+                        <td><img src="img\motor.jpg" alt="DC Motors" /></td>
+                    </tr>
+                    <tr>
+                        <td>Power Switch</td>
+                        <td>Switch to control the power supply</td>
+                        <td><img src="img\switch.jpeg" alt="Power Switch" /></td>
+                    </tr>
+                    <tr>
+                        <td>LED</td>
+                        <td>Light Emitting Diode for status indication</td>
+                        <td><img src="img\led.jpg" alt="LED" /></td>
+                    </tr>
+                    <tr>
+                        <td>Battery Pack</td>
+                        <td>Power source for the robot</td>
+                        <td><img src="img\battery.jpg" alt="Battery Pack" /></td>
+                    </tr>
+                    <tr>
+                        <td>Chassis</td>
+                        <td>Frame of the robot</td>
+                        <td><img src="img\chassis.jpg" alt="Chassis" /></td>
+                    </tr>
+                    <tr>
+                        <td>Various Cables and Connectors</td>
+                        <td>Wiring and connectors for circuit connections</td>
+                        <td><img src="img\wires.jpg" alt="Cables and Connectors" /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Circuit Diagram</h3>
+            <img src="img\cd3.png" alt="ASTRA Circuit Diagram" class="circuit-diagram">
+
+            <h3>Code</h3>
+            <pre>
+                #define LS 10      // left sensor
+                #define RS 9       // right sensor
+                #define LM1 7      //motor Driver in1
+                #define LM2 6     //motor Driver in2
+                #define RM1 5      //motor Driver in3
+                #define RM2 4      //motor Driver in4
+                
+                void setup()
+                {
+                  pinMode(LS, INPUT);
+                  pinMode(RS, INPUT);
+                  pinMode(LM1, OUTPUT);
+                  pinMode(LM2, OUTPUT);
+                  pinMode(RM1, OUTPUT);
+                  pinMode(RM2, OUTPUT);
+                
+                }
+                void loop()
+                {
+                  
+                  
+                  if(!digitalRead(LS) && !digitalRead(RS))  
+                  {
+                       // FORWARD
+                    digitalWrite(LM1, HIGH);
+                    digitalWrite(LM2, LOW);
+                    digitalWrite(RM1, HIGH);
+                    digitalWrite(RM2, LOW);
+                  }
+                  
+                  if((digitalRead(LS)) && !digitalRead(RS))     
+                  {
+                      // Left turn
+                    digitalWrite(LM1, LOW);
+                    digitalWrite(LM2, LOW);
+                    digitalWrite(RM1, HIGH);
+                    digitalWrite(RM2, LOW);
+                  }
+                  
+                  if(!digitalRead(LS) && (digitalRead(RS)))     
+                  {
+                        // turn right
+                    digitalWrite(LM1, HIGH);
+                    digitalWrite(LM2, LOW);
+                    digitalWrite(RM1, LOW);
+                    digitalWrite(RM2, LOW);
+                  }
+                  
+                  if((digitalRead(LS)) && (digitalRead(RS)))    
+                  {       //Stop
+                    digitalWrite(LM1, LOW);
+                    digitalWrite(LM2, LOW);
+                    digitalWrite(RM1, LOW);
+                    digitalWrite(RM2, LOW);
+                  }
+                }
+                
+                
+            </pre>
+
+            <h3>Video Preview</h3>
+            <a href="https://youtu.be/QoNkpnpvEqc?si=ghPopiNE947q4Z0E" target="_blank" class="video-link">
+                <img src="https://img.youtube.com/vi/QoNkpnpvEqc/hqdefault.jpg" alt="ASTRA Video Thumbnail" class="video-thumbnail">
+            </a>
+            
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img\Logo 2.png" alt="Robo Hub Logo">
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="form.php">Innovate</a>
+                <a href="about.html">About Us</a>
+                <a href="login.php">Login</a>
+            </div>
+        </div>
+        <div class="footer-socials">
+            <a href="#"><img src="img\facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img\twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="img\instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Robo Hub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

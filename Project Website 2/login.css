@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Changed to Roboto for overall body text */
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+}
+
+.logo img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem; /* Login page font size */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main section styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 20px;
+}
+
+/* Login container styling */
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Adjust width as needed */
+    text-align: center;
+}
+
+/* Title styling for Login Page */
+.login-container h2 {
+    font-family: 'Montserrat', sans-serif; /* Title font changed to Montserrat */
+    font-size: 2.5rem; /* Login page font size */
+    color: #f4a300;
+    margin-bottom: 30px;
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-family: 'Lato', sans-serif; /* Changed to Lato for labels */
+    font-size: 1.8rem; /* Login page font size */
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem; /* Login page font size */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif; /* Input font changed to Roboto */
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f4a300;
+    color: #fff;
+    font-size: 1.5rem; /* Login page font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif; /* Button font changed to Lato */
+}
+
+button:hover {
+    background-color: #d48c00;
+}
+
+.register-link {
+    margin-top: 20px;
+    font-size: 1rem; /* Login page font size */
+}
+
+.register-link p {
+    font-family: 'Lato', sans-serif; /* Changed to Lato for paragraph */
+    color: #333;
+}
+
+.register-link a {
+    color: #f4a300;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for form section */
+.form-section {
+    background-color: #fff; /* White background for the form */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Set a max width for larger screens */
+    margin: 20px auto; /* Center the section on the page */
+}
+
+/* Message styling */
+.message {
+    font-size: 1.2rem;
+    color: #f4a300; /* Color for messages */
+    margin-bottom: 20px; /* Space below the message */
+    text-align: center; /* Center the message */
+}
+
+/* Footer styling */
+footer {
+    background-color: #383736;
+    color: #fff;
+    padding: 12px 40px; /* Increase padding to make footer larger */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    border-radius: 10px; /* Curved edges for logo */
+    overflow: hidden; /* Ensure image fits within curved edges */
+}
+
+.footer-logo img {
+    width: 300px; /* Increase logo size */
+    height: auto;
+    border-radius: 10px; /* Curved edges for logo */
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* Increase font size */
+}
+
+.footer-links a:hover {
+    color: #f4a300;
+}
+
+/* Social media icons styling */
+.footer-socials {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 40px; /* Increase gap between icons */
+    width: 100%;
+}
+
+.footer-socials a img {
+    width: 60px; /* Increase social media icon size */
+    height: auto;
+}
+
+/* Footer bottom styling */
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+}

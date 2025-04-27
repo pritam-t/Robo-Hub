@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Project</title>
+    <link rel="stylesheet" href="project.css"> <!-- Ensure this path is correct -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/Logo 2.png" alt="Robo Hub Logo"/> <!-- Use relative path -->
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="form.php">Innovate</a>
+            <a href="about.html">About Us</a>
+            <a href="login.php">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-details">
+            <h2 id="project-name">Project Name</h2> <!-- Placeholder for project name -->
+            <img id="project-image" src="" alt="Project Image" style="display:none;"> <!-- Placeholder for project image -->
+            <p class="description"><strong>Project Description:</strong></p>
+            <p id="project-description" class="description-text"></p> <!-- Placeholder for project description -->
+            <p class="circuit-diagram"><strong><h3>Circuit Diagram:</h3></strong></p>
+            <img id="circuit-diagram-img" src="" alt="Circuit Diagram" style="display:none;"> <!-- Placeholder for circuit diagram -->
+            <h3>Code</h3>
+            <pre id="project-code"></pre> <!-- Placeholder for project code -->
+            <h3>YouTube Video</h3>
+            <iframe id="youtube-video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe> <!-- Placeholder for YouTube video -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/Logo 2.png" alt="Robo Hub Logo"> <!-- Use relative path -->
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="form.php">Innovate</a>
+                <a href="about.html">About Us</a>
+                <a href="login.php">Login</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Robo Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Retrieve data from localStorage and populate the page
+        document.getElementById('project-name').innerText = localStorage.getItem('projectName') || 'Untitled Project';
+        document.getElementById('project-description').innerText = localStorage.getItem('projectDescription') || 'No description available.';
+        document.getElementById('project-code').innerText = localStorage.getItem('projectCode') || 'No code available.';
+        document.getElementById('youtube-video').src = localStorage.getItem('youtubeLink') || '';
+
+        // Handle project image if you need to display it
+        const projectImage = localStorage.getItem('projectImage');
+        if (projectImage) {
+            const imgElement = document.getElementById('project-image');
+            imgElement.src = projectImage; // Use the stored data URL
+            imgElement.style.display = 'block'; // Show the image
+        }
+
+        // Handle circuit diagram image if you need to display it
+        const circuitDiagram = localStorage.getItem('circuitDiagram');
+        if (circuitDiagram) {
+            const circuitImgElement = document.getElementById('circuit-diagram-img');
+            circuitImgElement.src = circuitDiagram; // Set the source to the stored data URL
+            circuitImgElement.style.display = 'block'; // Show the image
+        }
+    </script>
+</body>
+</html>

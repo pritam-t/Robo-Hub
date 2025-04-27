@@ -1,0 +1,268 @@
+/* General styling */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img 
+{
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: gives a rounded corner effect */
+    margin-right: 20px;
+}
+
+nav 
+{
+    display: flex;
+    gap: 30px; /* Increased gap for larger font size */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600; /* Increased font weight */
+    font-size: 1.2rem; /* Increased font size */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+}
+
+.project-details h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8rem; /* Increased font size for project name */
+    color: #333;
+    text-align: center;
+}
+
+.project-details img {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
+}
+
+.project-details .circuit-diagram {
+    
+    width: 70%; /* Adjust the width as needed to decrease size */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    height: auto;
+}
+
+.project-details p.description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem; /* Increased font size for 'Project Description:' */
+    color: #333;
+    margin-top: 20px;
+}
+
+.project-details p.description-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem; /* Increased font size for description text */
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.project-details p.subheading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem; /* Increased font size for subheading */
+    color: #333;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.project-details p.subheading-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem; /* Slightly increased font size for subparagraph text */
+    color: #666;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.project-details h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem; /* Increased font size for headings like 'Components Required' */
+    color: #333;
+    margin-top: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.project-details ul {
+    list-style: disc;
+    margin-left: 40px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem; /* Increased font size for list items */
+}
+
+/* Code block styling */
+.project-details pre {
+    background-color: #f5f5f5; /* Light grey background for code box */
+    border: 1px solid #ccc; /* Light grey border for code box */
+    border-radius: 8px; /* Rounded corners for code box */
+    padding: 20px; /* Padding inside the code box */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+    font-size: 1.4rem; /* Font size for code */
+    line-height: 1.5; /* Line height for readability */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    max-width: 100%; /* Ensure it fits within its container */
+    white-space: pre; /* Preserve whitespace and line breaks */
+}
+
+.project-details {
+    width: 90%; /* Adjust the width as needed */
+    max-width: 1200px; /* Set a maximum width to prevent it from stretching too wide */
+    margin: 0 auto; /* Center align the content */
+}
+
+.project-details a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.project-details a:hover {
+    text-decoration: underline;
+}
+/* Circuit Diagram Table Styles */
+.components-table {
+    width: 70%; /* Increased width for a larger table */
+    margin-top: 15px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.components-table th,
+.components-table td {
+    padding: 8px; /* Increased padding for better readability */
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 1.5rem; /* Larger font size */
+}
+
+.components-table th {
+    background-color: #333;
+    color: #fff;
+}
+
+.components-table th.component-name,
+.components-table td.component-name {
+    font-family: 'Montserrat', sans-serif; /* Change to desired font family */
+    font-size: 1.2rem; /* Increase font size if needed */
+    font-weight: bold; /* Set font weight to bold for emphasis */
+}
+
+.components-table th.short-info,
+.components-table td.short-info {
+    width: 80%; /* Increase width for 'Short Info' column */
+}
+
+.components-table th.component-image,
+.components-table td.component-image {
+    width: 30%; /* Increase width for 'Component Image' column */
+}
+
+.components-table img {
+    width: 40%; /* Fit image to cell width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+}
+
+/* Other existing styles */
+
+
+/* Footer styling */
+footer {
+    background-color: #383736;
+    color: #fff;
+    padding: 12px 40px; /* Increase padding to make footer larger */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    border-radius: 10px; /* Curved edges for logo */
+    overflow: hidden; /* Ensure image fits within curved edges */
+}
+
+.footer-logo img {
+    width: 300px; /* Increase logo size */
+    height: auto;
+    border-radius: 10px; /* Curved edges for logo */
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* Increase font size */
+}
+
+.footer-links a:hover {
+    color: #f4a300;
+}
+
+/* Social media icons styling */
+.footer-socials {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 40px; /* Increase gap between icons */
+    width: 100%;
+}
+
+.footer-socials a img {
+    width: 60px; /* Increase social media icon size */
+    height: auto;
+}
+
+/* Footer bottom styling */
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+}
+

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Montserrat:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img\Logo 2.png" alt="Robo Hub Logo"/>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="explore.php">Explore</a>
+            <a href="form.html">Innovate</a>
+            <a href="about.html">About Us</a>
+            <a href="login.php">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-details">
+            <h2>NavBot</h2>
+            <img src="img\project2.png" alt="RoverX Image">
+            <p class="description"><strong>Project Description:</strong></p>
+            <p class="description-text">
+                NavBot is an innovative robotic vehicle designed to autonomously navigate complex environments while effectively detecting and avoiding obstacles. Utilizing advanced sensors and algorithms, NavBot can identify potential hazards in its path and make real-time decisions to alter its course, ensuring safe and efficient movement. This project aims to enhance navigation capabilities through a combination of computer vision and machine learning techniques, enabling NavBot to operate in various settings, including indoor spaces, outdoor terrains, and dynamic environments. With its versatility and intelligence, NavBot serves as a foundation for future developments in autonomous robotics, smart transportation systems, and safety applications.
+            </p>
+            <p class="subheading">Usage of NavBot:</p>
+            <p class="subheading-text"><strong>1) Autonomous Navigation:</strong> NavBot can be used in environments where human navigation is difficult, such as warehouses, factories, or crowded spaces, enabling efficient movement without human intervention.</p>
+            <p class="subheading-text"><strong>2) Obstacle Avoidance:</strong>  It can effectively detect and navigate around obstacles in real time, making it suitable for applications in delivery services, security patrols, and inspections.</p>
+            <p class="subheading-text"><strong>3) Search and Rescue Operations:</strong>  In disaster-stricken areas, NavBot can navigate through debris to locate survivors or deliver supplies safely.</p>
+            <p class="subheading-text"><strong>4) Agricultural Monitoring:</strong> Farmers can deploy NavBot to navigate fields autonomously, monitoring crops and detecting barriers or hazards.</p>
+            <p class="subheading-text"><strong>5) Research and Development:</strong>  NavBot serves as a platform for researchers and students to explore robotics, artificial intelligence, and machine learning applications in obstacle detection and navigation.</p>
+            <p class="subheading-text"><strong>6) Smart Transportation:</strong> It can be integrated into smart cities for traffic monitoring, ensuring efficient flow and safety in urban environments.</p>
+            <p class="subheading-text"><strong>7) Educational Tool:</strong> NavBot can be used in educational settings to teach students about robotics, programming, and sensor integration.</p>
+            
+                  <h3>Components Required</h3>
+            <table class="components-table">
+                <thead>
+                    <tr>
+                        <th>Component Name</th>
+                        <th>Short Info</th>
+                        <th>Component Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Arduino Uno</td>
+                        <td>Microcontroller board based on the ATmega328P</td>
+                        <td><img src="img\au.jpg" alt="Arduino Uno" /></td>
+                    </tr>
+                    <tr>
+                        <td>L298N</td>
+                        <td>Motor driver IC used to control motors</td>
+                        <td><img src="img\l298n.jpg" alt="L293D" /></td>
+                    </tr>
+                    <tr>
+                        <td>IR Sensor</td>
+                        <td>Infrared sensor used for obstacle detection</td>
+                        <td><img src="img\sensor.jpg" alt="IR Sensor" /></td>
+                    </tr>
+                    <tr>
+                        <td>DC Motors</td>
+                        <td>Direct Current motors for driving the robot</td>
+                        <td><img src="img\motor.jpg" alt="DC Motors" /></td>
+                    </tr>
+                    <tr>
+                        <td>Power Switch</td>
+                        <td>Switch to control the power supply</td>
+                        <td><img src="img\switch.jpeg" alt="Power Switch" /></td>
+                    </tr>
+                    <tr>
+                        <td>LED</td>
+                        <td>Light Emitting Diode for status indication</td>
+                        <td><img src="img\led.jpg" alt="LED" /></td>
+                    </tr>
+                    <tr>
+                        <td>Battery Pack</td>
+                        <td>Power source for the robot</td>
+                        <td><img src="img\battery.jpg" alt="Battery Pack" /></td>
+                    </tr>
+                    <tr>
+                        <td>Chassis</td>
+                        <td>Frame of the robot</td>
+                        <td><img src="img\chassis.jpg" alt="Chassis" /></td>
+                    </tr>
+                    <tr>
+                        <td>Various Cables and Connectors</td>
+                        <td>Wiring and connectors for circuit connections</td>
+                        <td><img src="img\wires.jpg" alt="Cables and Connectors" /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Circuit Diagram</h3>
+            <img src="img\cd2.png" alt="RoverX Circuit Diagram" class="circuit-diagram">
+
+            <h3>Code</h3>
+            <pre>
+                // Define the pins for the ultrasonic sensor
+                #define trigPin 9
+                #define echoPin 10
+                
+                // Define the pins for the motor driver
+                #define motorAForward 5
+                #define motorAReverse 6
+                #define motorBForward 7
+                #define motorBReverse 8
+                
+                // Define the distance threshold (in cm) to detect obstacles
+                #define thresholdDistance 15 
+                
+                void setup() {
+                  // Start serial communication for debugging
+                  Serial.begin(9600);
+                
+                  // Set the ultrasonic sensor pins as output/input
+                  pinMode(trigPin, OUTPUT);
+                  pinMode(echoPin, INPUT);
+                
+                  // Set motor control pins as output
+                  pinMode(motorAForward, OUTPUT);
+                  pinMode(motorAReverse, OUTPUT);
+                  pinMode(motorBForward, OUTPUT);
+                  pinMode(motorBReverse, OUTPUT);
+                }
+                
+                void loop() {
+                  long duration, distance;
+                
+                  // Trigger the ultrasonic sensor
+                  digitalWrite(trigPin, LOW);
+                  delayMicroseconds(2);
+                  digitalWrite(trigPin, HIGH);
+                  delayMicroseconds(10);
+                  digitalWrite(trigPin, LOW);
+                
+                  // Read the echo time
+                  duration = pulseIn(echoPin, HIGH);
+                  distance = duration * 0.034 / 2; // Convert time to distance
+                
+                  // Debugging: print the distance to the Serial Monitor
+                  Serial.print("Distance: ");
+                  Serial.println(distance);
+                
+                  // Check if an obstacle is detected
+                  if (distance < thresholdDistance) {
+                    // Stop the motors
+                    stopMotors();
+                    
+                    // Reverse for 1 second
+                    reverseMotors();
+                    delay(1000);
+                    
+                    // Turn the robot
+                    turnLeft();
+                    delay(500);
+                    
+                    // Move forward again
+                    moveForward();
+                  } else {
+                    // Move forward
+                    moveForward();
+                  }
+                
+                  delay(100); // Delay to avoid overwhelming the loop
+                }
+                
+                // Function to move the robot forward
+                void moveForward() {
+                  digitalWrite(motorAForward, HIGH);
+                  digitalWrite(motorAReverse, LOW);
+                  digitalWrite(motorBForward, HIGH);
+                  digitalWrite(motorBReverse, LOW);
+                }
+                
+                // Function to stop the motors
+                void stopMotors() {
+                  digitalWrite(motorAForward, LOW);
+                  digitalWrite(motorAReverse, LOW);
+                  digitalWrite(motorBForward, LOW);
+                  digitalWrite(motorBReverse, LOW);
+                }
+                
+                // Function to reverse the motors
+                void reverseMotors() {
+                  digitalWrite(motorAForward, LOW);
+                  digitalWrite(motorAReverse, HIGH);
+                  digitalWrite(motorBForward, LOW);
+                  digitalWrite(motorBReverse, HIGH);
+                }
+                
+                // Function to turn left
+                void turnLeft() {
+                  digitalWrite(motorAForward, LOW);
+                  digitalWrite(motorAReverse, LOW);
+                  digitalWrite(motorBForward, HIGH);
+                  digitalWrite(motorBReverse, LOW);
+                }
+                
+            </pre>
+
+            <h3>Video Preview</h3>
+            <a href="https://youtu.be/1n_KjpMfVT0?si=IF3uPK_HWlTI2y3Y" target="_blank" class="video-link">
+                <img src="https://img.youtube.com/vi/1n_KjpMfVT0/hqdefault.jpg" alt="NavBot Video Thumbnail" class="video-thumbnail">
+            </a>
+            
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img\Logo 2.png" alt="Robo Hub Logo">
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="form.php">Innovate</a>
+                <a href="about.html">About Us</a>
+                <a href="login.php">Login</a>
+            </div>
+        </div>
+        <div class="footer-socials">
+            <a href="#"><img src="img\facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img\twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="img\instagram.png" alt="Instagram"></a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Robo Hub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

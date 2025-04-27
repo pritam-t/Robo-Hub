@@ -1,0 +1,255 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px; /* Adjusted padding for header */
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: gives a rounded corner effect */
+    margin-right: 20px;
+}
+
+.logo h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #f4a300;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+
+
+nav {
+    display: flex;
+    gap: 30px; /* Increased gap for larger font size */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600; /* Increased font weight */
+    font-size: 1.2rem; /* Increased font size */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main section styling */
+main {
+    padding: 0; /* Remove default padding */
+}
+
+/* Image container */
+.image-container {
+    position: relative;
+    margin-top: 0; /* Remove margin to fit directly under the header */
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: none; /* Remove max-width constraint */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    pointer-events: none; /* Ensures text does not block interactions with the image */
+}
+
+.welcome-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem; /* Increased font size */
+    color: #fff;
+    text-align: center;
+}
+
+.welcome-text .line-1 {
+    display: block;
+}
+
+.info-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem; /* Increased font size */
+    color: #fff;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 20px; /* Space from the bottom */
+}
+
+.bottom-left-text {
+    font-family: 'Roboto Mono', monospace; /* Replace with desired robotics-related font */
+    font-size: 3.5rem; /* Increased size */
+    color: #fff;
+    text-align: left;
+    margin-left: 20px; /* Space from the left */
+    margin-top: auto;
+}
+
+.bottom-left-text .line-1 {
+    display: block;
+}
+
+/* Info section styling */
+#info {
+    text-align: center;
+    background-color: #e0e0e0; /* New background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px 0; /* Added margin for spacing */
+}
+
+h2 {
+    color: #f4a300;
+    font-size: 3rem; /* Increased font size */
+}
+
+h3 {
+    color: #000;
+    font-size: 1.5rem; /* Slightly larger font */
+}
+
+/* Main points section styling */
+.main-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Reduced space between boxes */
+    justify-content: center; /* Center the boxes */
+    margin-top: 20px;
+}
+
+.main-point {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 15px; /* Reduced padding */
+    width: calc(30% - 30px); /* Decreased width for 3 boxes per line */
+    height: 350px; /* Decreased height */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-point:hover {
+    transform: translateY(-10px); /* Bumping up effect */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+}
+
+.main-point h4 {
+    font-size: 2rem; /* Adjusted font size */
+    color: #f4a300;
+    margin-bottom: 10px;
+}
+
+.main-point p {
+    font-size: 1.2rem; /* Adjusted font size */
+    color: #333;
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #383736;
+    color: #fff;
+    padding: 12px 40px; /* Increase padding to make footer larger */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    border-radius: 10px; /* Curved edges for logo */
+    overflow: hidden; /* Ensure image fits within curved edges */
+}
+
+.footer-logo img {
+    width: 300px; /* Increase logo size */
+    height: auto;
+    border-radius: 10px; /* Curved edges for logo */
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* Increase font size */
+}
+
+.footer-links a:hover {
+    color: #f4a300;
+}
+
+/* Social media icons styling */
+.footer-socials {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 40px; /* Increase gap between icons */
+    width: 100%;
+}
+
+.footer-socials a img {
+    width: 60px; /* Increase social media icon size */
+    height: auto;
+}
+
+/* Footer bottom styling */
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+}

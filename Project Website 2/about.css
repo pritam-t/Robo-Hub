@@ -1,0 +1,253 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: gives a rounded corner effect */
+    margin-right: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 30px; /* Increased gap for larger font size */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600; /* Increased font weight */
+    font-size: 1.2rem; /* Increased font size */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main section styling */
+main {
+    padding: 0; /* Remove default padding */
+}
+
+/* Image and title section */
+.about-image-container {
+    position: relative;
+    width: 100%;
+}
+
+.about-image-container img {
+    width: 100%;
+    height: auto;
+    max-width: none; /* Remove max-width constraint */
+}
+
+.about-title {
+    position: absolute;
+    top: 10px; /* Adjust top position as needed */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Adjust height as needed */
+}
+
+.about-title h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 3rem; /* Adjust font size as needed */
+    color: #fff;
+    background: none; /* Remove any background color */
+    padding: 0;
+}
+
+/* Welcome message styling */
+.welcome-message {
+    position: absolute;
+    bottom: 0; /* Stick to the bottom of the container */
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+}
+
+.welcome-message p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem; /* Increased font size */
+    color: #333;
+    margin: 0;
+}
+
+/* About section styling */
+.about-section {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px; /* Add space above the 'Our Team' section */
+}
+
+.about-section h2 {
+    color: #f4a300;
+    font-size: 2.5rem; /* Larger font size for the heading */
+    margin-bottom: 30px; /* Add space below the heading */
+}
+
+/* Updated team members styling */
+.team-member-container {
+    display: flex;
+    justify-content: center; /* Center the boxes horizontally */
+    flex-wrap: wrap;
+    gap: 10px; /* Minimal gap between boxes */
+}
+
+.team-member {
+    background-color: #fff;
+    background-image: url('G:/Pritam/Project Website 2/img/team bg.jpg'); /* Use relative path */
+    background-size: cover; /* Cover the entire box */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image repetition */
+    border: 2px solid #000; /* Black border */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    flex: 1 1 calc(30% - 10px); /* Further decreased width */
+    max-width: calc(30% - 10px); /* Reduced maximum width */
+    height: auto; /* Adjust height automatically based on content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto; /* Center each box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
+}
+
+.team-member img {
+    width: 440px; /* Further increased image size */
+    height: 440px; /* Further increased image size */
+    border-radius: 10px;
+    object-fit: cover; /* Ensures image fits within square frame */
+    margin-bottom: 15px;
+}
+
+.team-member .position {
+    font-size: 2rem; /* Font size for position */
+    color: #333;
+    margin: 5px 0; /* Reduced margin for closer spacing */
+    font-family: 'Montserrat', sans-serif; /* Font family for position */
+}
+
+.team-member h3 {
+    font-size: 2rem; /* Font size for name (same as position) */
+    color: #000;
+    margin: 5px 0; /* Reduced margin for closer spacing */
+    font-family: 'Montserrat', sans-serif; /* Font family for name */
+}
+
+.team-member p {
+    font-size: 1.6rem; /* Font size for description */
+    color: #000;
+    font-family: 'Lato', sans-serif; 
+}
+
+/* Hover effect for team members */
+.team-member:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
+    border-color: #f4a300; /* Change border color on hover */
+}
+
+/* Footer styling */
+footer {
+    background-color: #383736;
+    color: #fff;
+    padding: 12px 40px; /* Increase padding to make footer larger */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    border-radius: 10px; /* Curved edges for logo */
+    overflow: hidden; /* Ensure image fits within curved edges */
+}
+
+.footer-logo img {
+    width: 300px; /* Increase logo size */
+    height: auto;
+    border-radius: 10px; /* Curved edges for logo */
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* Increase font size */
+}
+
+.footer-links a:hover {
+    color: #f4a300;
+}
+
+/* Social media icons styling */
+.footer-socials {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 40px; /* Increase gap between icons */
+    width: 100%;
+}
+
+.footer-socials a img {
+    width: 60px; /* Increase social media icon size */
+    height: auto;
+}
+
+/* Footer bottom styling */
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+}
