@@ -67,9 +67,9 @@ This project is free to use and modify!
 ## 📬 Contact
 
 Want to suggest improvements or collaborate? Reach out!
-### techworld1773@gmail.com
+techworld1773@gmail.com
 
 ---
 
-✨ Thank you for checking out my project!
+# ✨ Thank you for checking out my project!
 > Made with ❤️ for all makers, coders, and dreamers.
