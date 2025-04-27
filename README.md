@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="images/Logo.png" alt="Robo Hub Logo" width="200"/>
+  <img src="images/Logo.png" width="180"/>
   Robo Hub 🚀
 </h1>
 
@@ -19,22 +19,22 @@ Welcome to **Robo Hub** — a platform for students and hobbyists to **share**, 
 ## 📸 Screenshots
 
 > _Here are some glimpses of Robo Hub in action:_
-
+<br>
 ### Home Page
 ![Home Page](images/home.PNG)
 
 ---
-
+<br>
 ### Explore Projects
 ![Explore Projects](images/explore.PNG)
 
 ---
-
+<br>
 ### Project Details
 ![Project Details Page](images/explore2.PNG)
 
 ---
-
+<br>
 ## 🚀 How It Works
 
 1. Browse the list of available projects.
