@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="images/Logo.png" alt="Robo Hub Logo" width="200"/>
+  <img src="images/Logo.png" width="200"/>
   Robo Hub 🚀
 </h1>
 
