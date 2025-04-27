@@ -6,8 +6,6 @@
 Welcome to **Robo Hub** — a platform for students and hobbyists to **share**, **explore**, and **collaborate** on amazing projects!
 
 
-Welcome to **Robo Hub** — a platform for students and hobbyists to **share**, **explore**, and **collaborate** on amazing projects!
-
 ## ✨ Features
 
 - **Upload Projects:** Students can upload their projects with full description, source code, circuit diagrams, and even YouTube links for demonstrations (especially for robotics-related projects).
