@@ -17,25 +17,28 @@ Welcome to **Robo Hub** — a platform for students and hobbyists to **share**, 
 ## 📸 Screenshots
 
 > _Here are some glimpses of Robo Hub in action:_
-<br>
 
 ### Home Page
+<br>
+
 ![Home Page](images/home.PNG)
 
 ---
-<br>
 
 ### Explore Projects
+<br>
+
 ![Explore Projects](images/explore.PNG)
 
 ---
-<br>
 
 ### Project Details
+<br>
+
 ![Project Details Page](images/explore2.PNG)
+<br>
 
 ---
-<br>
 
 ## 🚀 How It Works
 
