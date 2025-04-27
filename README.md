@@ -1,12 +1,10 @@
-<p align="center">
-  <img src="images/Logo.png" alt="Robo Hub Logo" width="200"/>
-</p>
-
-# Robo Hub 🚀
+<h1 align="center">
+  <img src="images/Logo.png" alt="Robo Hub Logo" width="50"/>
+  Robo Hub 🚀
+</h1>
 
 Welcome to **Robo Hub** — a platform for students and hobbyists to **share**, **explore**, and **collaborate** on amazing projects!
 
-# Robo Hub 🚀
 
 Welcome to **Robo Hub** — a platform for students and hobbyists to **share**, **explore**, and **collaborate** on amazing projects!
 
