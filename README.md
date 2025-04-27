@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/robohub_logo.png" alt="Robo Hub Logo" width="200"/>
+  <img src="Robo-Hub/images/Logo.png" alt="Robo Hub Logo" width="200"/>
 </p>
 
 # Robo Hub 🚀
@@ -23,17 +23,17 @@ Welcome to **Robo Hub** — a platform for students and hobbyists to **share**, 
 > _Here are some glimpses of Robo Hub in action:_
 
 ### Home Page
-![Home Page](images/homepage.png)
+![Home Page](Robo-Hub/images/home.png)
 
 ---
 
 ### Explore Projects
-![Explore Projects](images/explore_projects.png)
+![Explore Projects](Robo-Hub/images/explore.png)
 
 ---
 
 ### Project Details
-![Project Details Page](images/project_details.png)
+![Project Details Page](Robo-Hub/images/explore1.png)
 
 ---
 
@@ -64,6 +64,7 @@ This project is free to use and modify!
 ## 📬 Contact
 
 Want to suggest improvements or collaborate? Reach out!
+### techworld1773@gmail.com
 
 ---
 
