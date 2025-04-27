@@ -23,7 +23,7 @@ Welcome to **Robo Hub** — a platform for students and hobbyists to **share**, 
 > _Here are some glimpses of Robo Hub in action:_
 
 ### Home Page
-![Home Page](Robo-Hub/images/home.png)
+![Home Page](images/home.PNG)
 
 ---
 
