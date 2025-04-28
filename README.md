@@ -36,6 +36,22 @@ Welcome to **Robo Hub** — a platform for students and hobbyists to **share**, 
 <br>
 
 ![Project Details Page](images/explore2.PNG)
+
+---
+
+### Login
+<br>
+
+![Explore Projects](images/login.png)
+
+---
+
+
+### Upload Project
+<br>
+
+![Explore Projects](images/submit.png)
+
 <br>
 
 ---
