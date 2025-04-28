@@ -3,7 +3,7 @@
   Robo Hub 🚀
 </h1>
 
-Welcome to **Robo Hub** — a platform for students and hobbyists to **share**, **explore**, and **collaborate** on amazing projects!
+🤖 Welcome to **Robo Hub** — a platform for students and hobbyists to **share**, **explore**, and **collaborate** on amazing projects!
 
 
 ## ✨ Features
@@ -18,28 +18,28 @@ Welcome to **Robo Hub** — a platform for students and hobbyists to **share**, 
 
 > _Here are some glimpses of Robo Hub in action:_
 
-### Home Page
+### 🏠 Home Page
 <br>
 
 ![Home Page](images/home.PNG)
 
 ---
 
-### Explore Projects
+### 🔍 Explore Projects
 <br>
 
 ![Explore Projects](images/explore.PNG)
 
 ---
 
-### Project Details
+### 📝 Project Details
 <br>
 
 ![Project Details Page](images/explore2.PNG)
 
 ---
 
-### Login
+### 🔐 Login
 <br>
 
 ![Explore Projects](images/login.png)
@@ -47,7 +47,7 @@ Welcome to **Robo Hub** — a platform for students and hobbyists to **share**, 
 ---
 
 
-### Upload Project
+### 📤 Upload Project
 <br>
 
 ![Explore Projects](images/submit.png)
